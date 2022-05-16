@@ -58,7 +58,7 @@ export default class KoaModule implements IModule, IocAdapter {
     if (this.appConfig.ENV === 'local') {
       this.app.use(serve(__dirname + '/static'))
       this.app.listen(3000)
-      console.log('Server on http://localhost:3000')
+      console.log('Server on http://localhost:3000/swagger')
     }
   }
 
