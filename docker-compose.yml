@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  api-boilerplate:
+    container_name: api-boilerplate
+    image: public.ecr.aws/lambda/nodejs:12    
+    command:       
+      - 'app.handler'
+    ports: 
+      - 9000:8080
+    volumes:
+      - ./dist:/var/task:ro
+
+  mongo-boilerplate:
+    container_name: mongo-boilerplate
+    image: mongo:4.4
+    ports:
+      - 27017:27017
+
+# pathsToModuleNameMapper# 'node --inspect=0.0.0.0:9222 --nolazy /var/task/app.js'

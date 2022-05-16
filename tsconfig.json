@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {    
+		"target": "ES2019",
+    "module": "commonjs",    
+    "resolveJsonModule": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,		
+		"moduleResolution": "node",
+    "rootDirs": ["src", "tests"],
+		"baseUrl": "src",
+		"paths": {
+			"@api/*": ["api/*"],
+			"@app/*": ["app/*"],
+			"@domain/*": ["domain/*"],
+			"@crosscutting/*": ["infra/crosscutting/*"],
+			"@modules/*": ["infra/modules/*"],
+      "@tests/*": ["../tests/*"],
+			"~/*": ["*"]
+		},		
+		"sourceMap": true,
+		"outDir": "./dist",
+		"removeComments": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"strictPropertyInitialization": false,
+		"skipLibCheck": true
+	},
+	"include": ["./src/**/*", "./tests/**/*"],
+	"exclude": ["node_modules"]
+}
